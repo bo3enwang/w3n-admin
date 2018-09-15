@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<semantic:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:di="http://www.omg.org/spec/DD/20100524/DI" 
+  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" 
+  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" 
+  xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL" id="_1275940932088" targetNamespace="http://www.trisotech.com/definitions/_1275940932088">
+  <semantic:message id="_1275940932310" />
+  <semantic:message id="_1275940932433" />
+  <semantic:message id="_1275940932198" />
+  <semantic:process id="Process_1eu1ztz">
+    <semantic:startEvent id="StartEvent_0hzbkwt">
+      <semantic:outgoing>SequenceFlow_1o2t40y</semantic:outgoing>
+    </semantic:startEvent>
+    <semantic:task id="Task_033d7m6" name="请假">
+      <semantic:incoming>SequenceFlow_1o2t40y</semantic:incoming>
+      <semantic:outgoing>SequenceFlow_02rjbj8</semantic:outgoing>
+    </semantic:task>
+    <semantic:task id="Task_0y0pc89" name="审批" magic="test">
+      <semantic:incoming>SequenceFlow_02rjbj8</semantic:incoming>
+      <semantic:outgoing>SequenceFlow_1r9hift</semantic:outgoing>
+    </semantic:task>
+    <semantic:sequenceFlow id="SequenceFlow_1o2t40y" sourceRef="StartEvent_0hzbkwt" targetRef="Task_033d7m6" />
+    <semantic:sequenceFlow id="SequenceFlow_02rjbj8" sourceRef="Task_033d7m6" targetRef="Task_0y0pc89" />
+    <semantic:endEvent id="EndEvent_1f5fb80">
+      <semantic:incoming>SequenceFlow_1r9hift</semantic:incoming>
+    </semantic:endEvent>
+    <semantic:sequenceFlow id="SequenceFlow_1r9hift" sourceRef="Task_0y0pc89" targetRef="EndEvent_1f5fb80" />
+  </semantic:process>
+  <bpmndi:BPMNDiagram id="Trisotech.Visio-_6" name="Untitled Diagram" documentation="" resolution="96.00000267028808">
+    <bpmndi:BPMNPlane bpmnElement="Process_1eu1ztz">
+      <bpmndi:BPMNShape id="StartEvent_0hzbkwt_di" bpmnElement="StartEvent_0hzbkwt">
+        <dc:Bounds x="-84" y="127" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_033d7m6_di" bpmnElement="Task_033d7m6">
+        <dc:Bounds x="17" y="125" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_0y0pc89_di" bpmnElement="Task_0y0pc89">
+        <dc:Bounds x="167" y="105" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1o2t40y_di" bpmnElement="SequenceFlow_1o2t40y">
+        <di:waypoint x="-48" y="145" />
+        <di:waypoint x="-15" y="145" />
+        <di:waypoint x="-15" y="165" />
+        <di:waypoint x="17" y="165" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_02rjbj8_di" bpmnElement="SequenceFlow_02rjbj8">
+        <di:waypoint x="117" y="165" />
+        <di:waypoint x="142" y="165" />
+        <di:waypoint x="142" y="145" />
+        <di:waypoint x="167" y="145" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="EndEvent_1f5fb80_di" bpmnElement="EndEvent_1f5fb80">
+        <dc:Bounds x="336" y="127" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1r9hift_di" bpmnElement="SequenceFlow_1r9hift">
+        <di:waypoint x="267" y="145" />
+        <di:waypoint x="336" y="145" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</semantic:definitions>
