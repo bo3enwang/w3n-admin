@@ -34,3 +34,9 @@ Mock.mock("/system/org", "get", options => {
     }
   ];
 });
+
+Mock.mock("/form/step", "post", options => {
+  setTimeout(() => {
+    return { msg: "ok" };
+  }, 5000);
+});
