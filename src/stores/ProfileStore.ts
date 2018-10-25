@@ -7,6 +7,6 @@ export default class ProfileStore {
   token: string;
 
   constructor() {
-    console.log("just need init");
+    this.userInfo = {}
   }
 }
