@@ -5,6 +5,7 @@ import { BasicLayout, ScrollLayout } from "./Layouts";
 import { BasicForm, StepForm, ComplexForm } from "./Forms";
 import { Org, User } from "./System";
 import { DND, RichEditor } from "./Advanced";
+import { ChatRoom } from "./Server";
 
 import { getPlainNode } from "utils/routes";
 
@@ -94,6 +95,21 @@ export const menuData: IMenu[] = [
         icon: "user",
         path: "rich-editor",
         component: RichEditor,
+        exact: false
+      }
+    ]
+  },
+  {
+    name: "远程连接",
+    icon: "setting",
+    path: "server",
+    exact: false,
+    children: [
+      {
+        name: "聊天室",
+        icon: "team",
+        path: "chatroom",
+        component: ChatRoom,
         exact: false
       }
     ]
